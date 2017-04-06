@@ -1,0 +1,39 @@
+@import 'variables';
+@import "{}/node_modules/reactionic/dist/scss/styles/reactionic";
+
+html, body {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.stretch {
+  height: 100%;
+  width: 100%;
+}
+
+.platform-ios.platform-cordova {
+  &:not(.fullscreen) {
+    .scroll-content.ios-top-margin {
+        top: $ios-statusbar-height;
+    }
+    .bar-header:not(.bar-subheader) {
+      span > .title {
+          top: $ios-statusbar-height;
+      }
+    }
+  }
+}
+
+// fourseven:scss has a horrible bug where it can't import multiple
+// scss files that have the same name
+@import 'app-mixins';
+@import 'bourbon/bourbon';
+
+@import 'components/input';
+@import 'components/menu';
+@import 'components/modal';
+@import 'components/notes-form'; // XXX rename file and styles
+
+@import 'styleguide';
+@import '{}/node_modules/react-fab/dist/main.scss';
+
+@import 'import';

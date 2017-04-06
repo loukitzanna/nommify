@@ -1,0 +1,9 @@
+node_modules/
+coverage
+.coverage
+.nyc_output
+
+npm-debug.log
+settings.json
+!.deploy-dev/settings.json
+build

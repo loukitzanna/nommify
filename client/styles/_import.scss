@@ -1,0 +1,502 @@
+/**
+ * THIS FILE IS AUTO-GENERATED
+ *
+ * ANY CHANGE YOU MAKE TO THIS WILL BE OVERWRITTEN
+ */
+.login-form__group {
+  @include form-group;
+
+  label {
+    @include label;
+  }
+}
+.login-register-view {
+  background: white;
+  padding: 40px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 4px;
+}
+
+.login-register-view__tab-group {
+  @include tab-group;
+}
+
+.login-register-view__tab {
+  @include tab;
+}
+
+.login-register-view__tab--active {
+  @include tab-active;
+}
+
+.login-register__tab-content {
+  
+}
+.memo-attach__dropzone {
+
+}
+.memo-input-group {
+  margin-bottom: 34px;
+  position: relative;
+
+  .DraftEditor-root {
+    font-family: $font-family-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1.58;
+    letter-spacing: -.003em;
+  }
+
+  .DraftEditor-editor {
+    border-top: 1px solid #ddd;
+    cursor: text;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  .DraftEditor-editor .public-DraftEditorPlaceholder-root,
+  .DraftEditor-editor .public-DraftEditor-content {
+    margin: 0 -15px -15px;
+    padding: 15px;
+  }
+
+  .public-DraftEditorPlaceholder-root {
+    color: $input-color-placeholder;
+    position: absolute;
+    z-index: 99;
+  }
+
+  .DraftEditor-editorContainer {
+    position: relative;
+    z-index: 100;
+  }
+
+  .public-DraftEditor-content {
+    min-height: 100px;
+    z-index: 100;
+  }
+
+  .public-DraftStyleDefault-block {
+    margin-bottom: 38px;
+  }
+}
+
+.memo-input-group--hide-placeholder .public-DraftEditorPlaceholder-root {
+  display: none;
+}
+.memo-ribbon {
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+
+  ul {
+    border-top: 1px solid #ccc;
+    display: flex;
+    flex-direction: row;
+  }
+
+  li {
+    display: flex;
+    flex: 1;
+  }
+
+  li + li {
+    border-left: 1px solid #ccc;
+  }
+
+  button {
+    background-color: transparent;
+    color: $dark;
+    border: 0;
+    display: flex;
+    flex: 1;
+    @include rem(font-size, 16px);
+    text-align: center;
+
+    transition: all 0.2s ease; // TODO use a variable
+    transition-property: background-color;
+
+    &:hover {
+      background-color: lighten($app-memosa, 15);
+    }
+
+    &:active,
+    &:focus {
+      background-color: lighten($app-memosa, 10);
+    }
+  }
+
+  i {
+    @include rem(font-size, 20px);
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+.view-form-layout__button {
+  background-color: transparent;
+  margin-top: 0px;
+
+  > * {
+    height: 40pt;
+  }
+
+  path {
+    @include transition(path 0.2s ease-in);
+  }
+}
+
+.view-form-layout__button--transitioning {
+  z-index: 10 !important;
+// 
+  > * {
+    background-color: $app-memosa !important;
+    transform: scale(50) !important;
+  }
+
+  svg {
+    filter: none !important;
+  }
+
+  path {
+    opacity: 0;
+  }
+}
+.notebooks-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.notebook-list-item-graphic__wrapper {
+  background-color: transparent;
+  border: 0;
+  text-align: left;
+  width: 50%;
+}
+
+$notebook-height: 230px;
+$notebook-width: 3.5 / 5 * $notebook-height;
+$notebook-ledger-height: $notebook-height / 2.1;
+
+.notebook-list-item-graphic {
+  background-color: #c34244;
+  border-radius: 0px 8px 8px 0px;
+  box-shadow: 4px 3px 10px rgba(21, 21, 21, 0.3);
+  color: $app-memosa-light;
+  height: $notebook-height;
+  margin: 10px auto;
+  padding-top: $notebook-height / 2 - $notebook-ledger-height / 2;
+  position: relative;
+  width: $notebook-width;
+
+  .notebook-list-item__created {
+    font-size: 12px;
+    color: darken($app-memosa-light, 60%);
+  }
+}
+
+.notebook-list-item-graphic__decoration {
+  border: 1px solid #b43d3f;
+  position: absolute;
+  left: 5px;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.notebook-list-item-graphic__inner {
+  background-color: rgb(21, 21, 21);
+  font-size: 16px;
+  height: $notebook-ledger-height;
+  padding: 20px;
+  position: relative;
+  width: $notebook-width;
+  z-index: 2;
+}
+
+
+.notebook-list-item-graphic__wrapper--default {
+  .notebook-list-item-graphic {
+    background-color: transparent;
+    border: 2px solid white;
+    box-shadow: none;
+
+  }
+
+  .notebook-list-item-graphic__decoration {
+    border: 1px solid #eee;
+  }
+
+  .notebook-list-item-graphic__inner {
+    background-color: transparent;
+  }
+}
+.view-list-layout__view {
+  background-color: $app-memosa;
+}
+.button--icon {
+  background-color: transparent;
+  height: auto;
+  min-height: 0;
+  width: auto;
+
+  > * {
+    background-color: transparent;
+    transform: scale(1);
+    transition: all .1s ease-in;
+
+    svg {
+      transition-property: filter;
+    }
+  }
+
+  &:hover {
+    > * {
+      transform: scale(1.1);
+
+      svg {
+        filter: drop-shadow(0px 2px 3px #aaa);
+      }
+    }
+  }
+
+  &:active {
+    > * {
+      transform: scale(1.1) translateY(1px);
+
+      svg {
+        filter: drop-shadow(0px 1px 2px #aaa);
+      }
+    }
+  }
+}
+.selectable-list {
+  width: 100%;
+}
+
+.selectable-list__item {
+  background-color: transparent;
+  border: 1px solid #aaa;
+  text-align: inherit;
+
+  @include transition(background-color .2s $ease-in-sine);
+
+  width: 100%;
+
+  & + & {
+    border-top: 0px;
+  }
+}
+
+.selectable-list__item--selected {
+  background-color: transparentize($app-memosa, .5);
+}
+
+$background-color: #1B101F;
+$loader-color: #FE665C;
+
+$loader-size: em(32);
+$loader-animation-duration: 1.15s;
+
+
+.circular-loading,
+.circular-loading__figure {
+  @include position(absolute, 50% null null 50%);
+  @include transform(translate(-50%, -50%));
+}
+
+.circular-loading {
+  @include size($loader-size 0);
+  overflow: visible;
+  padding-top: $loader-size;
+}
+
+.circular-loading__figure {
+  @include size(0);
+  box-sizing: border-box;
+  border: 0 solid $loader-color;
+  border-radius: 50%;
+  @include animation(loader-figure $loader-animation-duration infinite $ease-out-cubic);
+}
+
+.circular-loading__label {
+  float: left;
+  margin-left: 50%;
+  @include transform(translateX(-50%));
+  margin: 0.5em 0 0 50%;
+
+  font-size: em(14);
+  letter-spacing: 0.1em;
+  line-height: 1.5em;
+  color: mix($loader-color, $background-color);
+  white-space: nowrap;
+  @include animation(loader-label $loader-animation-duration infinite $ease-out-cubic);
+}
+
+
+@include keyframes(loader-figure) {
+  0% {
+    @include size(0);
+  }
+
+  30% {
+    @include size($loader-size);
+    border-width: $loader-size / 2;
+    opacity: 1;
+  }
+
+  100% {
+    @include size($loader-size);
+    border-width: 0;
+    opacity: 0;
+  }
+}
+
+@include keyframes(loader-label) {
+  0% {
+    opacity: 0.35;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.35;
+  }
+}
+
+$fg: $app-memosa;
+// Max number of menu items
+$menu-items: 10;
+
+%goo {
+  filter: url('#shadowed-goo');
+}
+
+%ball {
+  $width: 40pt;
+  background: $fg;
+  border-radius: 100%;
+  width: $width;
+  height: $width;
+  margin-left: -$width/2;
+  position: absolute;
+  top: 20px;
+  color: white;
+  text-align: center;
+  line-height: 80px;
+  transform: translate3d(0,0,0);
+  transition: transform ease-out 200ms;
+}
+
+.gooey-menu__open {
+  display: none;
+}
+
+.gooey-menu__item {
+  @extend %ball;
+}
+
+.gooey-menu {
+  @extend %goo;
+
+  $width: 380px;
+  position: absolute;
+  left: 50%;
+  margin-left: -$width/2;
+  padding-top: 20px;
+  padding-left: $width/2;
+  width: $width;
+  height: 0px;
+  box-sizing: border-box;
+  font-size: 20px;
+  text-align: left;
+}
+
+.gooey-menu__item {
+  padding: 0 !important;
+
+  &:hover {
+    background: white;
+    color: $fg;
+  }
+  @for $i from 1 through $menu-items {
+    &:nth-child(#{$i+2}){
+      transition-duration: 10ms+(60ms*($i));
+    }
+  }
+}
+
+.gooey-menu__open__button {
+  @extend %ball;
+
+  border: 2px solid $app-memosa-dark;
+  padding: 0 !important;
+  z-index: 2 !important;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+  transition-duration: 400ms;
+  transform: scale(1.1,1.1) translate3d(0,0,0);
+  cursor: pointer;
+}
+.gooey-menu__open__button:hover {
+  transform: scale(1.2,1.2) translate3d(0,0,0);
+}
+.gooey-menu--open .gooey-menu__open__button {
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  transform: scale(0.8,0.8) translate3d(0,0,0);
+}
+
+.gooey-menu--open .gooey-menu__item {
+  transition-timing-function: cubic-bezier(0.935, 0.000, 0.340, 1.330);
+
+  @for $i from 1 through $menu-items {
+    &:nth-child(#{$i+2}){
+      transition-duration: 80ms+(80ms*$i);
+    }
+  }
+}
+
+
+.gooey-menu__line {
+  $width: 20px;
+  $height: 3px;
+  width: $width;
+  height: $height;
+  background: $app-memosa-dark;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -$width/2;
+  margin-top: -$height/2;
+  transition: transform 200ms;
+}
+
+$hamburger-spacing:8px;
+
+.gooey-menu__line-1{
+  transform:translate3d(0,-$hamburger-spacing,0);
+}
+.gooey-menu__line-2{
+  transform:translate3d(0,0,0);
+}
+.gooey-menu__line-3{
+  transform:translate3d(0,$hamburger-spacing,0);
+}
+
+.gooey-menu--open .gooey-menu__open__button {
+  .gooey-menu__line-1 {
+    transform:translate3d(0,0,0) rotate(45deg);
+  }
+  .gooey-menu__line-2 {
+    transform:translate3d(0,0,0) scale(0.1,1);
+  }
+  .gooey-menu__line-3 {
+    transform:translate3d(0,0,0) rotate(-45deg);
+  }
+}

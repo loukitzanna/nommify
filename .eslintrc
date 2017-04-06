@@ -1,0 +1,52 @@
+{
+  "extends": [
+    "memosa",
+    "plugin:meteor/recommended"
+  ],
+
+  "env": {
+    "browser": true,
+    "meteor": true,
+    "mocha": true,
+    "node": true
+  },
+
+  "parserOptions": {
+    "allowImportExportEverywhere": true
+  },
+
+  "settings": {
+    "import/resolver": "meteor"
+  },
+
+  "plugins": [
+    "chai-expect",
+    "meteor",
+    "promise"
+  ],
+
+  "rules": {
+    "no-console": "error",
+    "no-warning-comments": ["error", { "terms": ["xxx"], "location": "start" }],
+    "object-shorthand": "off",
+
+    "chai-expect/missing-assertion": 2,
+    "chai-expect/terminating-properties": 1,
+
+    "import/max-dependencies": "off",
+    # Meteor uses absolute paths
+    "import/no-absolute-path": "off",
+    # We use connect()() which changes the name
+    "import/no-named-as-default": "off",
+    # We sometimes export 1 item from an index file like constants/index.js
+    "import/prefer-default-export": "off",
+
+    "promise/param-names": 2,
+    "promise/always-return": 2,
+    "promise/catch-or-return": 2,
+    "promise/no-native": 0,
+
+    "react/sort-prop-types": "error",
+
+  }
+}

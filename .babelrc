@@ -1,0 +1,15 @@
+{
+  "presets": [
+    "memosa"
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        ["babel-root-import", {
+          "rootPathPrefix": "/",
+          "rootPathSuffix": "./"
+        }]
+      ]
+    }
+  }
+}
